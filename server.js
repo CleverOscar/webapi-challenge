@@ -3,7 +3,7 @@ const server = express();
 const projectRouter = require('./data/projects-router');
 const actionsRouter = require('./data/actions-router');
 server.use(express.json());
-server.use('/api/projects', projectRouter);
+server.use('/api/projects', projectRouter, actionsRouter);
 server.get('/', (req, res) =>{
   res.send(
     `<h1> Welcome</h1>`
